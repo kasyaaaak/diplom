@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>EUROCARS</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="./index.html" class="menu__link menu__link--active">Головна</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Про нас</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Контакти</a>
+            </li>
+          </ul>
+          <a href="./index.html" class="header__logo">
+            <img
+              src="./images/logo.svg"
+              alt="EUROCARS"
+              class="header__logo-img"
+            />
+          </a>
+          <a href="#" class="menu__button">Переглянути каталог</a>
+        </nav>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container">
+        <div class="hero__slider swiper">
+          <div class="hero__slider-wrapper swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="hero__slide swiper-slide">
+              <img
+                src="./images/hero/hero-1.jpg"
+                alt="EUROCARS slide"
+                class="hero__slide-bg"
+                data-swiper-parallax="-20%"
+              />
+              <div class="hero__slide-content">
+                <h2 class="hero__subtitle">Ваш шлях до бездоганності починається тут</h2>
+                <h1 class="hero__title">Ексклюзивні автомобілі з європейською історією</h1>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="hero__slide swiper-slide">
+              <img
+                src="./images/hero/hero-4.jpg"
+                alt="EUROCARS slide"
+                class="hero__slide-bg"
+                data-swiper-parallax="-20%"
+              />
+              <div class="hero__slide-content">
+                <h2 class="hero__subtitle">Перевірена якість для вашої впевненості на дорозі</h2>
+                <h1 class="hero__title">Надійні авто, ретельно відібрані в Європі</h1>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="hero__slide swiper-slide">
+              <img
+                src="./images/hero/hero-5.jpg"
+                alt="EUROCARS slide"
+                class="hero__slide-bg"
+                data-swiper-parallax="-20%"
+              />
+              <div class="hero__slide-content">
+                <h2 class="hero__subtitle">Відчуйте привілей володіння</h2>
+                <h1 class="hero__title">Розкіш та елегантність, привезені з Європи</h1>
+              </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="hero__slide swiper-slide">
+              <img
+                src="./images/hero/hero-2.jpg"
+                alt="EUROCARS slide"
+                class="hero__slide-bg"
+                data-swiper-parallax="-20%"
+              />
+              <div class="hero__slide-content">
+                <h2 class="hero__subtitle">Інновації, доступні кожному</h2>
+                <h1 class="hero__title">Електромобілі з Європи – майбутнє вже сьогодні</h1>
+              </div>
+            </div>
+          </div>
+          <!-- Пагінація -->
+          <div class="hero__pagination swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
