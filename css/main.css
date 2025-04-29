@@ -64,9 +64,8 @@ body {
   width: 100%;
 }
 
-
 .menu__link--active {
-  font-weight: 600;
+  font-weight: 500;
   color: #136f63;
 }
 
@@ -93,11 +92,11 @@ body {
   color: #fff;
 }
 
-
+/* ----------------Page "Home"---------------- */
 /* Hero */
 
 .hero {
-  margin-bottom: 100px;
+  margin-bottom: 110px;
 }
 
 .hero__slide {
@@ -197,41 +196,180 @@ body {
 
 .advantages {
   background-color: #c7e3de;
-  padding: 120px 0;
+  padding: 70px 0;
+  margin-bottom: 110px;
 }
 
 .advantages__title {
   font-size: 30px;
   font-weight: 700;
   max-width: 350px;
-  /* line-height: 1.3; */
 }
 
 .advantages__content {
   display: flex;
   gap: 40px;
   justify-content: space-between;
-
 }
 
-.advantages__info {
+.advantages__list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   max-width: 930px;
-  gap: 40px 70px;
+  gap: 50px 70px;
 }
 
-.advantages__infobox-icon {
+.advantages__icon {
   margin-bottom: 20px;
 }
 
-.advantages__infobox-title {
-  font-size: 20px;
+.advantages__item-title {
+  font-size: 18px;
   font-weight: 600;
   margin-bottom: 15px;
 }
 
-.advantages__infobox-text {
+.advantages__item-text {
   line-height: 1.6;
+}
+
+/* Cooperation */
+
+.cooperation {
+  margin-bottom: 110px;
+}
+
+.cooperation__content {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.cooperation__img {
+  border-radius: 16px;
+}
+
+.cooperation__title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.cooperation__subtitle {
+  line-height: 1.6;
+  margin-bottom: 50px;
+  max-width: 530px;
+}
+
+.cooperation__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 70px;
+}
+
+.cooperation__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+.cooperation__icon {
+  width: 25px;
+  height: 25px;
+  padding: 4.5px;
+  background-color: #c7e3de;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.cooperation__button {
+  background-color: #136f63;
+  border: 1px solid #136f63;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.cooperation__button:hover {
+  background-color: #c7e3de;
+  color: #050b20;
+  border: 1px solid #136f63;
+}
+
+.cooperation__button:hover .button-arrow path {
+  stroke: #050b20;
+}
+
+/* Stats */
+
+.stats {
+  margin-bottom: 110px;
+  background-color: #c7e3de;
+  padding: 30px 0;
+}
+
+.stats__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+}
+
+.stats__item {
+text-align: center;
+}
+
+.stats__value {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.stats__label {
+  text-transform: uppercase;
+
+}
+
+
+
+/* ----------------Page "About us"---------------- */
+/* Team */
+
+.team {
+  margin-bottom: 100px;
+}
+
+.team__title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.team__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+}
+
+.team__img {
+  margin-bottom: 15px;
+  border-radius: 16px;
+}
+
+.team__name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #136f63;
+  margin-bottom: 5px;
+}
+
+.team__position {
+  font-size: 14px;
 }
