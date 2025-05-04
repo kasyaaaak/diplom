@@ -46,6 +46,11 @@
     />
     <meta name="theme-color" content="#ffffff" />
     <!-- Styles     -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/main.css" />
     <title>Про нас</title>
@@ -57,12 +62,12 @@
           <nav class="menu">
             <ul class="menu__list">
               <li class="menu__item">
-                <a href="../index.html" class="menu__link"
-                  >Головна</a
-                >
+                <a href="../index.html" class="menu__link">Головна</a>
               </li>
               <li class="menu__item">
-                <a href="./about.html" class="menu__link menu__link--active">Про нас</a>
+                <a href="./about.html" class="menu__link menu__link--active"
+                  >Про нас</a
+                >
               </li>
               <li class="menu__item">
                 <a href="./contacts.html" class="menu__link">Контакти</a>
@@ -75,59 +80,332 @@
                 class="header__logo-img"
               />
             </a>
-            <a href="./catalog.html" class="menu__button">Переглянути каталог</a>
+            <a href="./catalog.html" class="menu__button"
+              >Переглянути каталог</a
+            >
           </nav>
         </div>
       </header>
-      
+      <section class="about">
+        <div class="container">
+          <h2 class="about__title">Про компанію</h2>
+          <div class="about__wrapper">
+            <div class="about__content">
+              <p class="about__text">
+                Історія компанії почалася з особистого досвіду. У 2016 році троє
+                друзів, кожен з яких намагався самостійно придбати вживане авто
+                з Європи, зіштовхнулись із безліччю складнощів: мовний бар’єр,
+                недобросовісні посередники, приховані дефекти, складні процедури
+                розмитнення та реєстрації. Саме тоді виникла проста, але сильна
+                ідея — створити сервіс, якому можна довіряти.
+              </p>
+              <p class="about__text">
+                Уже за рік було засновано <span>EUROCARS</span> — компанію,
+                метою якої стало зробити покупку авто з Європи для українців
+                прозорою, комфортною і безпечною. Ми почали з кількох
+                партнерських автоплощадок у Німеччині та Польщі, самі перевіряли
+                машини, супроводжували клієнтів на всіх етапах і відмовлялись
+                від шаблонних рішень. Кожне замовлення — це був новий виклик,
+                але й нова історія довіри.
+              </p>
+              <p class="about__text">
+                З роками наша команда зросла, ми налагодили прямі зв’язки з
+                дилерами у понад 10 країнах ЄС, розширили спектр послуг та
+                сформували власну систему контролю якості. Та попри масштаби, ми
+                залишаємося вірними нашим першопочатковим принципам: чесність,
+                відкритість і відповідальність перед клієнтом.
+              </p>
+              <p class="about__text">
+                Ми не просто привозимо авто — ми допомагаємо людям зробити
+                впевнений і правильний вибір. І саме тому більшість з них
+                повертаються до нас знову.
+              </p>
+            </div>
+            <div class="about__image-wrapper">
+              <img
+                src="../images/about/about-img.png"
+                alt="Засновники компанії EUROCARS"
+                class="about__image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="container">
+          <div class="reviews__header">
+            <h2 class="reviews__title-main">Що говорять наші клієнти</h2>
+            <p class="reviews__subtitle">
+              Рейтинг 4.9 / 5 на основі 328 відгуків. Відображено лише оцінки 4
+              та 5 зірок
+            </p>
+          </div>
+
+          <div class="reviews__slider swiper">
+            <div class="swiper-wrapper">
+              <!-- 1 -->
+              <div class="reviews__card swiper-slide">
+                <div class="reviews__content">
+                  <h3 class="reviews__title">Все чітко</h3>
+                  <p class="reviews__text">
+                    “Коли вперше звернувся, не мав жодного уявлення, з чого
+                    почати. Але все організували від першого дзвінка до моменту
+                    передачі авто. Без плутанини, все прозоро. Вдячний команді”
+                  </p>
+                </div>
+                <div class="reviews__author">
+                  <div class="reviews__avatar">
+                    <img
+                      src="../images/reviews/review-1.png"
+                      alt="Олександр Рибак"
+                      class="reviews__img"
+                    />
+                  </div>
+                  <div class="reviews__info">
+                    <p class="reviews__name">Олександр Рибак</p>
+                    <p class="reviews__city">м. Київ</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2 -->
+              <div class="reviews__card swiper-slide">
+                <div class="reviews__content">
+                  <h3 class="reviews__title">Без сюрпризів</h3>
+                  <p class="reviews__text">
+                    “Приємно здивувало, що ніхто нічого не приховував. Авто
+                    перевірили, показали звіти, пояснили всі деталі. Враження
+                    максимально позитивні — сервіс на рівні”
+                  </p>
+                </div>
+                <div class="reviews__author">
+                  <div class="reviews__avatar">
+                    <img
+                      src="../images/reviews/review-2.png"
+                      alt="Наталія Таран"
+                      class="reviews__img"
+                    />
+                  </div>
+                  <div class="reviews__info">
+                    <p class="reviews__name">Наталія Таран</p>
+                    <p class="reviews__city">м. Рівне</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3 -->
+              <div class="reviews__card swiper-slide">
+                <div class="reviews__content">
+                  <h3 class="reviews__title">Швидко зробили</h3>
+                  <p class="reviews__text">
+                    “Очікував складного процесу, але все вийшло набагато
+                    простіше. Підібрали варіант під мій бюджет, перевірили
+                    технічний стан і доставили в обіцяні терміни”
+                  </p>
+                </div>
+                <div class="reviews__author">
+                  <div class="reviews__avatar">
+                    <img
+                      src="../images/reviews/review-3.png"
+                      alt="Максим Павлюк"
+                      class="reviews__img"
+                    />
+                  </div>
+                  <div class="reviews__info">
+                    <p class="reviews__name">Максим Павлюк</p>
+                    <p class="reviews__city">м. Вінниця</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4 -->
+              <div class="reviews__card swiper-slide">
+                <div class="reviews__content">
+                  <h3 class="reviews__title">Все просто</h3>
+                  <p class="reviews__text">
+                    “Це моє перше авто, тому було багато хвилювань. Але команда
+                    все чітко пояснила, допомогла з вибором і документами.
+                    Відчувала підтримку на кожному етапі”
+                  </p>
+                </div>
+                <div class="reviews__author">
+                  <div class="reviews__avatar">
+                    <img
+                      src="../images/reviews/review-4.png"
+                      alt="Ірина Лещенко"
+                      class="reviews__img"
+                    />
+                  </div>
+                  <div class="reviews__info">
+                    <p class="reviews__name">Ірина Лещенко</p>
+                    <p class="reviews__city">м. Черкаси</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 5 -->
+              <div class="reviews__card swiper-slide">
+                <div class="reviews__content">
+                  <h3 class="reviews__title">Добре пояснили</h3>
+                  <p class="reviews__text">
+                    “Зв’язок із менеджером був на кожному кроці. Ніяких
+                    затримок, усе чітко. Навіть після отримання авто уточнили,
+                    чи задоволений. Приємно, що не забувають про клієнта”
+                  </p>
+                </div>
+                <div class="reviews__author">
+                  <div class="reviews__avatar">
+                    <img
+                      src="../images/reviews/review-5.png"
+                      alt="Юрій Коваленко"
+                      class="reviews__img"
+                    />
+                  </div>
+                  <div class="reviews__info">
+                    <p class="reviews__name">Юрій Коваленко</p>
+                    <p class="reviews__city">м. Львів</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 6 -->
+              <div class="reviews__card swiper-slide">
+                <div class="reviews__content">
+                  <h3 class="reviews__title">Повернулась знову</h3>
+                  <p class="reviews__text">
+                    “Вперше скористалась послугами EUROCARS кілька років тому.
+                    Цього разу — знову до них. Якість, чесність і комфорт
+                    залишаються незмінними. Саме тому й повертаюсь”
+                  </p>
+                </div>
+                <div class="reviews__author">
+                  <div class="reviews__avatar">
+                    <img
+                      src="../images/reviews/review-6.png"
+                      alt="Олена Дяченко"
+                      class="reviews__img"
+                    />
+                  </div>
+                  <div class="reviews__info">
+                    <p class="reviews__name">Олена Дяченко</p>
+                    <p class="reviews__city">м. Харків</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="reviews__nav">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+
       <section class="team">
         <div class="container">
           <h2 class="team__title">Наша команда</h2>
           <div class="team__list">
             <div class="team__item">
-              <img src="../images/team/team-1.png" alt="Олександр Ковальчук" class="team__img">
+              <img
+                src="../images/team/team-1.png"
+                alt="Олександр Ковальчук"
+                class="team__img"
+              />
               <h3 class="team__name">Олександр Ковальчук</h3>
-              <p class="team__position">Керівник відділу стратегічного розвитку</p>
+              <p class="team__position">
+                Керівник відділу стратегічного розвитку
+              </p>
             </div>
             <div class="team__item">
-              <img src="../images/team/team-2.png" alt="Ірина Мельник" class="team__img">
+              <img
+                src="../images/team/team-2.png"
+                alt="Ірина Мельник"
+                class="team__img"
+              />
               <h3 class="team__name">Ірина Мельник</h3>
-              <p class="team__position">Директорка з продажу та роботи з корпоративними клієнтами</p>
+              <p class="team__position">
+                Директорка з продажу та роботи з корпоративними клієнтами
+              </p>
             </div>
             <div class="team__item">
-              <img src="../images/team/team-3.png" alt="Максим Бондаренко" class="team__img">
+              <img
+                src="../images/team/team-3.png"
+                alt="Максим Бондаренко"
+                class="team__img"
+              />
               <h3 class="team__name">Максим Бондаренко</h3>
               <p class="team__position">Керівник технічного департаменту</p>
             </div>
             <div class="team__item">
-              <img src="../images/team/team-4.png" alt="Ольга Савчук" class="team__img">
+              <img
+                src="../images/team/team-4.png"
+                alt="Ольга Савчук"
+                class="team__img"
+              />
               <h3 class="team__name">Ольга Савчук</h3>
-              <p class="team__position">Операційна директорка з логістики та постачання</p>
+              <p class="team__position">
+                Операційна директорка з логістики та постачання
+              </p>
             </div>
             <div class="team__item">
-              <img src="../images/team/team-5.png" alt="Віталій Шевченко" class="team__img">
+              <img
+                src="../images/team/team-5.png"
+                alt="Віталій Шевченко"
+                class="team__img"
+              />
               <h3 class="team__name">Віталій Шевченко</h3>
-              <p class="team__position">Спеціаліст із юридичного супроводу та реєстрації авто</p>
+              <p class="team__position">
+                Спеціаліст із юридичного супроводу та реєстрації авто
+              </p>
             </div>
             <div class="team__item">
-              <img src="../images/team/team-6.png" alt="Андрій Литвиненко" class="team__img">
+              <img
+                src="../images/team/team-6.png"
+                alt="Андрій Литвиненко"
+                class="team__img"
+              />
               <h3 class="team__name">Андрій Литвиненко</h3>
-              <p class="team__position">Експерт із технічної діагностики та перевірки транспортних засобів</p>
+              <p class="team__position">
+                Експерт із технічної діагностики та перевірки транспортних
+                засобів
+              </p>
             </div>
             <div class="team__item">
-              <img src="../images/team/team-7.png" alt="Катерина Романюк" class="team__img">
+              <img
+                src="../images/team/team-7.png"
+                alt="Катерина Романюк"
+                class="team__img"
+              />
               <h3 class="team__name">Катерина Романюк</h3>
-              <p class="team__position">Фінансовий консультант з автострахування та кредитування</p>
+              <p class="team__position">
+                Фінансовий консультант з автострахування та кредитування
+              </p>
             </div>
             <div class="team__item">
-              <img src="../images/team/team-8.png" alt="Марина Демченко" class="team__img">
+              <img
+                src="../images/team/team-8.png"
+                alt="Марина Демченко"
+                class="team__img"
+              />
               <h3 class="team__name">Марина Демченко</h3>
-              <p class="team__position">Клієнтська менеджерка з персональним супроводом покупців</p>
+              <p class="team__position">
+                Клієнтська менеджерка з персональним супроводом покупців
+              </p>
             </div>
           </div>
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <img src="../images/logo-white.svg" alt="" class="footer__logo" />
+          <p class="footer__rights">© 2025 EUROCARS. Всі права захищені.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../js/script.js"></script>
   </body>
 </html>

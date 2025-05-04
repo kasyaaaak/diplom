@@ -1,24 +1,55 @@
-const swiper = new Swiper(".hero__slider", {
-  loop: true,
-  pagination: {
-    el: ".hero__pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  autoplay: {
-    delay: 6000, // довша пауза між слайдами
-    disableOnInteraction: false,
-  },
-  effect: "fade",
-  fadeEffect: {
-    crossFade: true,
-  },
-  speed: 1200, // повільніший перехід (час анімації в мілісекундах)
-});
+// Hero slider (тільки якщо є на сторінці)
+const heroSliderEl = document.querySelector(".hero__slider");
+if (heroSliderEl) {
+  new Swiper(heroSliderEl, {
+    loop: true,
+    pagination: {
+      el: ".hero__pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+      delay: 6000,
+      disableOnInteraction: false,
+    },
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
+    speed: 1200,
+  });
+}
 
+// Reviews slider (тільки якщо є на сторінці)
+const reviewsSliderEl = document.querySelector(".reviews__slider");
+if (reviewsSliderEl) {
+  new Swiper(reviewsSliderEl, {
+    loop: true,
+    spaceBetween: 30,
+    slidesPerView: 1,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1200: {
+        slidesPerView: 3,
+      },
+    },
+  });
+}
+
+// Animated counters (тільки якщо є на сторінці)
 const counters = document.querySelectorAll(".stats__value");
 let started = false;
 
@@ -26,6 +57,8 @@ function animateCounters() {
   if (started) return;
 
   const statsSection = document.querySelector(".stats");
+  if (!statsSection) return;
+
   const sectionTop = statsSection.getBoundingClientRect().top;
   const windowHeight = window.innerHeight;
 

@@ -150,10 +150,10 @@ body {
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.51);
 }
 
-/* Swiper */
+/* Hero swiper */
 
-.swiper-button-prev,
-.swiper-button-next {
+.hero .swiper-button-prev,
+.hero .swiper-button-next {
   background-color: rgba(255, 255, 255, 0.2);
   padding: 10px 30px;
   color: #fff;
@@ -163,32 +163,32 @@ body {
   background-size: 12px;
 }
 
-.swiper-button-prev::after,
-.swiper-button-next::after {
+.hero .swiper-button-prev::after,
+.hero .swiper-button-next::after {
   content: "";
 }
 
-.swiper-button-next {
-  background-image: url("../images/hero/swiper-arrow-right.svg");
+.hero .swiper-button-next {
+  background-image: url("../images/swiper/swiper-arrow-right.svg");
 }
 
-.swiper-button-prev {
-  background-image: url("../images/hero/swiper-arrow-left.svg");
+.hero .swiper-button-prev {
+  background-image: url("../images/swiper/swiper-arrow-left.svg");
 }
 
-.swiper-pagination-bullet {
+.hero .swiper-pagination-bullet {
   background-color: #fff;
   width: 25px;
   border-radius: 2px;
   height: 2px;
 }
 
-.swiper-slide-active .hero__slide-content {
+.hero .swiper-slide-active .hero__slide-content {
   opacity: 1;
   transform: translateY(0);
 }
 
-.swiper-slide-active .hero__slide-bg {
+.hero .swiper-slide-active .hero__slide-bg {
   transform: scale(1.1);
 }
 
@@ -323,7 +323,7 @@ body {
 }
 
 .stats__item {
-text-align: center;
+  text-align: center;
 }
 
 .stats__value {
@@ -334,12 +334,155 @@ text-align: center;
 
 .stats__label {
   text-transform: uppercase;
-
 }
 
-
-
 /* ----------------Page "About us"---------------- */
+/* About */
+
+.about {
+  margin-bottom: 100px;
+}
+
+.about__title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.about__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  max-width: 720px;
+}
+
+.about__text {
+  line-height: 1.6;
+}
+
+.about__text span {
+  font-weight: 600;
+  color: #136f63;
+}
+
+.about__image {
+  max-width: 650px;
+  border-radius: 16px;
+}
+
+/* Reviews */
+
+.reviews {
+  background-color: #c7e3de;
+  margin-bottom: 50px;
+  padding: 50px 0;
+}
+
+.reviews__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.reviews__title-main {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.reviews__subtitle {
+  font-size: 14px;
+}
+
+.reviews__card {
+  background-color: #fff;
+  padding: 30px 40px;
+
+  border-radius: 16px;
+}
+
+.reviews__content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.reviews__title {
+  font-weight: 600;
+}
+
+.reviews__text {
+  line-height: 1.6;
+}
+
+.reviews__author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.reviews__img {
+  border-radius: 50%;
+  max-width: 60px;
+}
+
+.reviews__info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.reviews__name {
+  font-weight: 600;
+  color: #136f63;
+}
+
+.reviews__city {
+  font-size: 14px;
+}
+
+.reviews__nav {
+  display: flex;
+
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.reviews__nav .swiper-button-prev,
+.reviews__nav .swiper-button-next {
+  position: static;
+  width: 60px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: #136f63;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+  cursor: pointer;
+}
+
+.reviews__nav .swiper-button-prev {
+  background-image: url("../images/swiper/swiper-arrow-left.svg");
+}
+
+.reviews__nav .swiper-button-next {
+  background-image: url("../images/swiper/swiper-arrow-right.svg");
+}
+
+.reviews__nav .swiper-button-prev::after,
+.reviews__nav .swiper-button-next::after {
+  display: none;
+}
+
 /* Team */
 
 .team {
@@ -372,4 +515,20 @@ text-align: center;
 
 .team__position {
   font-size: 14px;
+}
+
+/* Footer */
+
+.footer {
+  background-color: #136f63;
+  padding: 20px 0;
+}
+
+.footer__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  color: #fff;
+  font-size: 12px;
 }
