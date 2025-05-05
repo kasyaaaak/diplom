@@ -94,3 +94,4 @@ function animateCounters() {
 }
 
 window.addEventListener("scroll", animateCounters);
+
