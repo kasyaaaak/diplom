@@ -95,3 +95,28 @@ function animateCounters() {
 
 window.addEventListener("scroll", animateCounters);
 
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector(".callback__form");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Створення попапа
+    const popup = document.createElement("div");
+    popup.classList.add("callback__popup");
+    popup.innerHTML = `
+      <h3 class="callback__popup-title">Дякуємо!</h3>
+      <p class="callback__popup-text">Наш менеджер зв’яжеться з вами протягом 5 хвилин.</p>
+    `;
+    document.body.appendChild(popup);
+
+    // Автоматичне зникнення через 5 секунд
+    setTimeout(() => {
+      popup.remove();
+    }, 5000);
+
+    // Очищення форми
+    form.reset();
+  });
+});
+
