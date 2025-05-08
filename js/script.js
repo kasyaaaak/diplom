@@ -1,8 +1,15 @@
-// Hero slider (тільки якщо є на сторінці)
+// Hero slider
 const heroSliderEl = document.querySelector(".hero__slider");
 if (heroSliderEl) {
   new Swiper(heroSliderEl, {
     loop: true,
+    effect: "fade",
+    fadeEffect: { crossFade: true },
+    speed: 1200,
+    autoplay: {
+      delay: 6000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".hero__pagination",
       clickable: true,
@@ -11,17 +18,36 @@ if (heroSliderEl) {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    autoplay: {
-      delay: 6000,
-      disableOnInteraction: false,
-    },
-    effect: "fade",
-    fadeEffect: {
-      crossFade: true,
-    },
-    speed: 1200,
+    breakpoints: {
+      // ≤414px
+      0: {
+        slidesPerView: 1,
+        navigation: false,
+        pagination: { type: "bullets" }
+      },
+      // 415–768px
+      415: {
+        slidesPerView: 1,
+        navigation: false,
+      },
+      // 769–1024px
+      769: {
+        slidesPerView: 1,
+      },
+      // 1025–1440px
+      1025: {
+        slidesPerView: 1,
+      },
+      // >1440px
+      1441: {
+        slidesPerView: 1,
+      }
+    }
   });
 }
+
+
+
 
 // Reviews slider (тільки якщо є на сторінці)
 const reviewsSliderEl = document.querySelector(".reviews__slider");
@@ -119,4 +145,16 @@ document.addEventListener("DOMContentLoaded", function () {
     form.reset();
   });
 });
+
+const burger     = document.querySelector('.menu__burger');
+const mobileMenu = document.querySelector('.menu__mobile');
+const body       = document.body;
+
+burger.addEventListener('click', () => {
+  burger.classList.toggle('active');
+  mobileMenu.classList.toggle('menu__mobile--active');
+  body.classList.toggle('menu-open');
+});
+
+
 

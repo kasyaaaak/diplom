@@ -2,6 +2,10 @@
 
 /* Main styles */
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 html,
 body {
   height: 100%;
@@ -46,7 +50,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  gap: 30px;
+  column-gap: 30px;
 }
 
 .menu__list {
@@ -62,6 +66,8 @@ body {
   text-decoration: none;
   padding-bottom: 5px; /* трохи місця для лінії */
   transition: color 0.4s ease;
+
+  white-space: nowrap;
 }
 
 .menu__link::after {
@@ -143,6 +149,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding: 0 15px;
   gap: 30px;
   color: #fff;
   max-width: 700px;
@@ -812,3 +819,337 @@ body {
   transition: stroke 0.3s ease;
 }
 
+/* Adaptation */
+/* ======== BURGER MENU (Mobile) ========= */
+/* === Desktop: ховаємо бургер і мобільне меню === */
+@media (min-width: 769px) {
+  .menu__burger,
+  .menu__mobile {
+    display: none;
+  }
+}
+
+/* === Mobile (≤768px): показуємо бургер, ховаємо десктоп-меню, контролюємо мобільне меню === */
+@media (max-width: 768px) {
+  /* 1. Робимо контейнер меню флексом */
+  .menu {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* 2. Ховаємо стандартні десктопні пункти та кнопку */
+  .menu__list,
+  .menu__button {
+    display: none;
+  }
+
+  /* 3. Бургер-кнопка */
+  .menu__burger {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  .menu__burger span {
+    position: absolute;
+    left: 100%;
+    width: 30px;
+    height: 2px;
+    background-color: #050b20;
+    border-radius: 1px;
+    transform-origin: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    margin-left: -15px;
+  }
+  .menu__burger span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-8px) translateX(-50%);
+  }
+  .menu__burger span:nth-child(2) {
+    top: 50%;
+    transform: translateY(0) translateX(-50%);
+  }
+  .menu__burger span:nth-child(3) {
+    top: 50%;
+    transform: translateY(8px) translateX(-50%);
+  }
+  /* анімація у хрестик */
+  .menu__burger.active span:nth-child(1) {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .menu__burger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu__burger.active span:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  /* 4. Мобільне меню (за замовчуванням приховане) */
+  .menu__mobile {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+  }
+  /* показуємо, коли додається клас --active */
+  .menu__mobile.menu__mobile--active {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* 5. Стилі пунктів мобільного меню */
+  .menu__mobile-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+  .menu__mobile-link {
+    font-size: 22px;
+    font-weight: 500;
+    color: #050b20;
+    text-decoration: none;
+  }
+  .menu__mobile-link--active {
+    color: #136f63;
+    font-weight: 700;
+  }
+
+  /* 6. Блокуємо скрол фону, коли меню відкрите */
+  body.menu-open {
+    overflow: hidden;
+    height: 100vh;
+  }
+}
+
+/* ----------------------------------------- */
+/* >1440px — десктоп */
+@media (min-width: 1441px) {
+  .hero__slide {
+    height: 600px;
+  }
+}
+
+/* 1025–1440px — середній десктоп / планшет ландшафт */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .hero__slide {
+    height: 540px;
+  }
+  .hero__title {
+    font-size: 36px;
+  }
+  .hero__subtitle {
+    font-size: 16px;
+  }
+}
+
+/* 769–1024px — планшет портрет */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero__slide {
+    height: 480px;
+  }
+  .hero__slide-content {
+    margin-top: 60px;
+    gap: 20px;
+  }
+  .hero__title {
+    font-size: 32px;
+  }
+  .hero__subtitle {
+    font-size: 15px;
+  }
+}
+
+/* 415–768px — великий смартфон */
+@media (min-width: 415px) and (max-width: 768px) {
+  .hero {
+    margin-bottom: 80px;
+  }
+  .hero > .container {
+    max-width: 100%;
+    padding: 0;
+  }
+  .hero__slide {
+    height: 400px;
+    border-radius: 0;
+  }
+  .hero__slide-content {
+    margin-top: 50px;
+    padding: 0 20px;
+  }
+  .hero__title {
+    font-size: 28px;
+  }
+  .hero__subtitle {
+    font-size: 14px;
+  }
+  .hero .swiper-button-prev,
+  .hero .swiper-button-next {
+    display: none;
+  }
+  .hero .swiper-pagination {
+    bottom: 10px;
+  }
+}
+
+/* ≤414px — малий смартфон */
+@media (max-width: 414px) {
+  .hero {
+    margin-bottom: 60px;
+  }
+  .hero > .container {
+    max-width: 100%;
+    padding: 0;
+  }
+  .hero__slide {
+    height: 320px;
+    border-radius: 0;
+  }
+  .hero__slide-content {
+    margin-top: 40px;
+    padding: 0 15px;
+  }
+  .hero__title {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  .hero__subtitle {
+    font-size: 12px;
+  }
+  .hero .swiper-button-prev,
+  .hero .swiper-button-next {
+    display: none;
+  }
+  .hero .swiper-pagination {
+    bottom: 8px;
+  }
+}
+
+@media (min-width: 1441px) {
+  .hero__slide-content {
+    max-width: 650px;
+    padding: 0 30px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .hero__slide-content {
+    margin-top: 65px;
+    padding: 0 25px;
+  }
+  .hero__subtitle {
+    font-size: 17px;
+  }
+  .hero__title {
+    font-size: 36px; /* можна залишити */
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero__slide-content {
+    margin-top: 55px;
+    gap: 15px;
+    padding: 0 25px;
+  }
+  .hero__subtitle {
+    font-size: 15px;
+  }
+  .hero__title {
+    font-size: 32px;
+  }
+}
+@media (min-width: 415px) and (max-width: 768px) {
+  .hero__slide-content {
+    margin-top: 50px;
+    padding: 0 20px;
+  }
+  .hero__title {
+    font-size: 28px;
+  }
+  .hero__subtitle {
+    font-size: 14px;
+  }
+  .hero .swiper-pagination {
+    bottom: 12px;
+  }
+}
+@media (max-width: 414px) {
+  .hero__slide-content {
+    margin-top: 40px;
+    padding: 0 15px;
+  }
+  .hero__title {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+  .hero__subtitle {
+    font-size: 12px;
+  }
+  .hero .swiper-pagination-bullet {
+    width: 20px;
+  }
+  .hero .swiper-pagination {
+    bottom: 8px;
+  }
+}
+/* === Mobile: зникають стрілки, героїчна секція чіпляється до хедера === */
+@media (max-width: 768px) {
+  .header {
+    /* прибираємо відступ під хедером */
+    margin-bottom: 0;
+  }
+}
+/* Прибрати відступ під хедером на мобілах */
+@media (max-width: 768px) {
+  .header {
+    margin-bottom: 0;
+  }
+}
+
+/* 415–768px — великий смартфон: підвищуємо висоту слайду */
+@media (min-width: 415px) and (max-width: 768px) {
+  .hero__slide {
+    height: 450px; /* раніше було 400px */
+  }
+}
+
+/* ≤414px — малий смартфон: трохи більша висота */
+@media (max-width: 414px) {
+  .hero__slide {
+    height: 360px; /* раніше було 320px */
+  }
+}
+/* тільки для смартфонів до 768px */
+
+@media (max-width: 768px) {
+  .hero-slide-1 .hero__slide-bg {
+    object-position: 30% top;
+  }
+  .hero-slide-2 .hero__slide-bg {
+    object-position: center top;
+  }
+  .hero-slide-3 .hero__slide-bg {
+    object-position: 60% top;
+  }
+  .hero-slide-4 .hero__slide-bg {
+    object-position: 40% top;
+  }
+}
